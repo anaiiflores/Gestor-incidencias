@@ -8,7 +8,7 @@ package gestor1;
  *
  * @author 34633
  */
-public class Gestor1 {
+public class Gestor1 { 
 
    
     
