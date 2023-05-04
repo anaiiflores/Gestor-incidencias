@@ -14,15 +14,17 @@ public class Gestor1 {
     
     public void inicio(){
         
-        Incidencia incidenciass = new Incidencia();
-        System.out.println("Incidencia: ");
+        Incidencia incidenciasss = new Incidencia(105, "No hay internet");
+        Incidencia incidenciasss2 = new Incidencia(14, "No arranca");
 
-        incidenciass.setId(0);
+        incidenciasss2.resuelta("Equipo no enchufado");
+
+        System.out.println(incidenciasss.toString());
+        System.out.println(incidenciasss2.toString());
     }
     
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hola");
         Gestor1 gestorr = new Gestor1();
         gestorr.inicio();
         

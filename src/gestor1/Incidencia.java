@@ -9,7 +9,8 @@ package gestor1;
  * @author 34633
  */
 public class Incidencia {
-    public int id;
+    public static int id1 = 1;
+    public int id2;
     public int numPuesto;
     public String desPro;
     public String estado;
@@ -17,16 +18,19 @@ public class Incidencia {
 
    
 
-    public Incidencia(int id, int numPuesto, String desPro, String estado, String desSol) {
-        this.id = id;
+    public Incidencia(int numPuesto, String desPro) {
+        this.id2 = id1;
         this.numPuesto = numPuesto;
         this.desPro = desPro;
         this.estado = "Pendiente";
-        this.desSol = desSol;
+        id1 ++;
     }
 
-    public int getId() {
-        return id;
+    public int getId2() {
+        return id2;
+    }
+    public int getId1() {
+        return id1;
     }
 
     public int getNumPuesto() {
@@ -50,8 +54,11 @@ public class Incidencia {
   
     //setters
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId2(int id2) {
+        this.id2 = id2;
+    }
+    public void setId1(int id1) {
+        this.id1 = id1;
     }
 
     public void setNumPuesto(int numPuesto) {
@@ -73,15 +80,18 @@ public class Incidencia {
 
     @Override
     public String toString() {
-        return "Incidencia " + id + " Puesto: " + numPuesto + " - " + desPro + " - " + estado + "-" + desSol ;
-    }
+        if (estado == "Resuelta"){
+        return "Incidencia " + id2 + " Puesto: " + numPuesto + " - " + desPro + " - " + estado + " - " + desSol ;
+    }else {
+            return "Incidencia " + id2 + " Puesto: " + numPuesto + " - " + desPro + " - " + estado;
+        }}
 
 
 //metodos
     
     public void resuelta(String desSol) {
     
-        this.estado = "resuelta";
+        this.estado = "Resuelta";
         this.desSol = desSol;
         
     }
