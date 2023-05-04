@@ -15,32 +15,39 @@ public class Incidencia {
     public String estado;
     public String desSol;
 
-    public Incidencia (int id, int numPuesto) {
+   
+
+    public Incidencia(int id, int numPuesto, String desPro, String estado, String desSol) {
         this.id = id;
-        this.estado = "pendiente";
         this.numPuesto = numPuesto;
-    
+        this.desPro = desPro;
+        this.estado = "Pendiente";
+        this.desSol = desSol;
     }
-    
+
     public int getId() {
         return id;
     }
-    //getters
-    public String getEstado() {
-        return estado;
-    }
-    
+
     public int getNumPuesto() {
         return numPuesto;
     }
-    
+
     public String getDesPro() {
         return desPro;
     }
-            
+
+    public String getEstado() {
+        return estado;
+    }
+
     public String getDesSol() {
         return desSol;
     }
+    
+    
+    
+  
     //setters
 
     public void setId(int id) {
@@ -66,11 +73,19 @@ public class Incidencia {
 
     @Override
     public String toString() {
-        return "Incidencia{" + "id=" + id + ", numPuesto=" + numPuesto + ", desPro=" + desPro + ", estado=" + estado + ", desSol=" + desSol + '}';
+        return "Incidencia " + id + " Puesto: " + numPuesto + " - " + desPro + " - " + estado + "-" + desSol ;
     }
 
 
-
+//metodos
+    
+    public void resuelta(String desSol) {
+    
+        this.estado = "resuelta";
+        this.desSol = desSol;
+        
+    }
+    
 
 
 

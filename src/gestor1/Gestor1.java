@@ -13,8 +13,11 @@ public class Gestor1 {
    
     
     public void inicio(){
-       
+        
+        Incidencia incidenciass = new Incidencia();
+        System.out.println("Incidencia: ");
 
+        incidenciass.setId(0);
     }
     
     public static void main(String[] args) {
@@ -22,6 +25,10 @@ public class Gestor1 {
         System.out.println("Hola");
         Gestor1 gestorr = new Gestor1();
         gestorr.inicio();
+        
+        
+        
+       
     }
     
 }
