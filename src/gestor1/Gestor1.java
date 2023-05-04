@@ -13,7 +13,6 @@ public class Gestor1 {
    
     
     public void inicio(){
-        System.out.println("Hola");
        
 
     }
